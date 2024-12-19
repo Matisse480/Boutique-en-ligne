@@ -3,76 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenEssence - Boutique Écoresponsable</title>
+    <meta name="description" content="GreenEssence est une boutique en ligne d'articles éco-responsables.">
+    <meta name="keywords" content="gourde, produits écologiques, éco-responsables">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>GreenEssence - Boutique éco-responsable</title>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#produits">Produits</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#panier"><i class="fas fa-cart-plus"></i> Panier</a></li>
+        </ul>
+    </nav>
 
-    <!-- Header -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Bijoux</a></li>
-                <li><a href="#">Accessoires</a></li>
-                <li><a href="#">Maison</a></li>
-                <li><a href="#">Nouveautés</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Rechercher des produits...">
-            <button>Recherche</button>
+    <!-- Carrousel -->
+    <section class="carrousel">
+        <div class="carrousel-item">
+            <img src="gourde1.jpg" alt="Gourde en inox">
+            <h3>Gourde en inox</h3>
+            <p>22,99€</p>
+            <button class="ajouter-panier">Ajouter au panier</button>
         </div>
-    </header>
+        <div class="carrousel-item">
+            <img src="brosse_bambou.jpg" alt="Brosse en bambou">
+            <h3>Brosse en bambou</h3>
+            <p>9,99€</p>
+            <button class="ajouter-panier">Ajouter au panier</button>
+        </div>
+        <button class="prev">←</button>
+        <button class="next">→</button>
+    </section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Bienvenue chez GreenEssence</h1>
-            <p>Des produits écoresponsables pour un mode de vie plus vert</p>
-            <a href="#" class="cta-btn">Découvrir nos produits</a>
+    <!-- Produits -->
+    <section id="produits" class="produits">
+        <h2>Nos Produits</h2>
+        <div class="produit-item">
+            <img src="gourde1.jpg" alt="Gourde écologique">
+            <h3>Gourde écologique</h3>
+            <p>Prix: 22,99€</p>
+            <button class="ajouter-panier">Ajouter au panier</button>
+        </div>
+        <div class="produit-item">
+            <img src="brosse_bambou.jpg" alt="Brosse en bambou">
+            <h3>Brosse en bambou</h3>
+            <p>Prix: 9,99€</p>
+            <button class="ajouter-panier">Ajouter au panier</button>
         </div>
     </section>
 
-    <!-- Product Display -->
-    <section class="product-display">
-        <h2>Nos produits</h2>
-        <div class="product-card">
-            <img src="gourde.jpg" alt="Gourde écologique">
-            <h3>Gourde en acier inoxydable</h3>
-            <p>Gardez votre boisson fraîche et écoresponsable.</p>
-            <span>€25,00</span>
-            <button>Acheter</button>
-        </div>
-        <div class="product-card">
-            <img src="bambou-brosse.jpg" alt="Brosse en bambou">
-            <h3>Brosse à dents en bambou</h3>
-            <p>Réduisez vos déchets avec cette brosse durable.</p>
-            <span>€6,00</span>
-            <button>Acheter</button>
-        </div>
-        <div class="product-card">
-            <img src="panier-ecologique.jpg" alt="Panier écoresponsable">
-            <h3>Panier en jute</h3>
-            <p>Fait à la main pour un style naturel et durable.</p>
-            <span>€18,00</span>
-            <button>Acheter</button>
-        </div>
-        <div class="product-card">
-            <img src="bracelet-marins.jpg" alt="Bracelet marin">
-            <h3>Bracelet Marin en Perles</h3>
-            <p>Un design élégant inspiré par l'océan.</p>
-            <span>€12,00</span>
-            <button>Acheter</button>
-        </div>
+    <!-- Formulaire de Contact -->
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <form>
+            <input type="text" name="name" placeholder="Votre nom">
+            <input type="email" name="email" placeholder="Votre email">
+            <textarea name="message" placeholder="Votre message"></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 GreenEssence - Boutique Écoresponsable</p>
-    </footer>
+    <!-- Panier -->
+    <section id="panier">
+        <h2>Votre Panier</h2>
+        <ul id="panier-list"></ul>
+        <p>Total : <span id="panier-total">0</span>€</p>
+    </section>
 
+    <script src="script.js"></script>
 </body>
 </html>
