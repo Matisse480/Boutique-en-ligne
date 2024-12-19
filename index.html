@@ -4,29 +4,198 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenEssence - Boutique Écologique</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Style de base */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .categories, .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .category, .product {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            width: 220px;
+        }
+
+        .category h2, .product h3 {
+            color: #333;
+        }
+
+        .category img, .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .category button, .product button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .category button:hover, .product button:hover {
+            background-color: #45a049;
+        }
+
+        /* Page produit */
+        .product-details {
+            display: none;
+            padding: 20px;
+        }
+
+        .product-details img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .back-button {
+            background-color: #ddd;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+
     <header>
+        <h1>GreenEssence - Boutique Écologique</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="produits.html">Produits</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <a href="#" onclick="showHomePage()">Accueil</a>
+            <a href="#" onclick="showCategories()">Produits</a>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Bienvenue sur GreenEssence</h1>
-            <p>Votre boutique éco-responsable pour un mode de vie durable.</p>
-            <a href="produits.html" class="btn">Voir nos produits</a>
-        </section>
-    </main>
+    <div class="container" id="homePage">
+        <h2>Bienvenue sur notre boutique éco-responsable</h2>
+        <p>Découvrez des produits respectueux de l'environnement et de qualité supérieure.</p>
+        <button onclick="showCategories()">Voir nos produits</button>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 GreenEssence. Tous droits réservés.</p>
-    </footer>
+    <div class="container" id="categoriesPage" style="display:none;">
+        <h2>Choisissez une catégorie</h2>
+        <div class="categories">
+            <div class="category">
+                <h2>Gourdes</h2>
+                <img src="https://via.placeholder.com/200" alt="Gourdes">
+                <button onclick="showProducts('gourdes')">Voir les produits</button>
+            </div>
+            <div class="category">
+                <h2>Cosmétiques</h2>
+                <img src="https://via.placeholder.com/200" alt="Cosmétiques">
+                <button onclick="showProducts('cosmetiques')">Voir les produits</button>
+            </div>
+            <div class="category">
+                <h2>Accessoires</h2>
+                <img src="https://via.placeholder.com/200" alt="Accessoires">
+                <button onclick="showProducts('accessoires')">Voir les produits</button>
+            </div>
+            <div class="category">
+                <h2>Vêtements</h2>
+                <img src="https://via.placeholder.com/200" alt="Vêtements">
+                <button onclick="showProducts('vetements')">Voir les produits</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="productsPage" style="display:none;">
+        <h2 id="categoryTitle"></h2>
+        <div class="products" id="productList"></div>
+        <button class="back-button" onclick="showCategories()">Retour aux catégories</button>
+    </div>
+
+    <script>
+        const products = {
+            gourdes: [
+                { name: "Gourde en bambou", image: "https://via.placeholder.com/200", description: "Gourde écologique, 100% biodégradable." },
+                { name: "Gourde inox", image: "https://via.placeholder.com/200", description: "Gourde en acier inoxydable, isotherme." }
+            ],
+            cosmetiques: [
+                { name: "Savon bio", image: "https://via.placeholder.com/200", description: "Savon fait main, 100% naturel." },
+                { name: "Shampooing solide", image: "https://via.placeholder.com/200", description: "Shampooing bio, zéro déchet." }
+            ],
+            accessoires: [
+                { name: "Sacs en toile", image: "https://via.placeholder.com/200", description: "Sac réutilisable, idéal pour le shopping." },
+                { name: "Brosse en bambou", image: "https://via.placeholder.com/200", description: "Brosse écologique en bambou." }
+            ],
+            vetements: [
+                { name: "T-shirt bio", image: "https://via.placeholder.com/200", description: "T-shirt en coton bio." },
+                { name: "Pantalon éthique", image: "https://via.placeholder.com/200", description: "Pantalon fabriqué de manière éthique." }
+            ]
+        };
+
+        function showHomePage() {
+            document.getElementById("homePage").style.display = "block";
+            document.getElementById("categoriesPage").style.display = "none";
+            document.getElementById("productsPage").style.display = "none";
+        }
+
+        function showCategories() {
+            document.getElementById("homePage").style.display = "none";
+            document.getElementById("categoriesPage").style.display = "block";
+            document.getElementById("productsPage").style.display = "none";
+        }
+
+        function showProducts(category) {
+            document.getElementById("homePage").style.display = "none";
+            document.getElementById("categoriesPage").style.display = "none";
+            document.getElementById("productsPage").style.display = "block";
+
+            document.getElementById("categoryTitle").textContent = category.charAt(0).toUpperCase() + category.slice(1);
+            const productList = document.getElementById("productList");
+            productList.innerHTML = "";
+            
+            products[category].forEach(product => {
+                const productDiv = document.createElement("div");
+                productDiv.classList.add("product");
+                productDiv.innerHTML = `
+                    <h3>${product.name}</h3>
+                    <img src="${product.image}" alt="${product.name}">
+                    <p>${product.description}</p>
+                `;
+                productList.appendChild(productDiv);
+            });
+        }
+
+        showHomePage(); // Afficher la page d'accueil par défaut
+    </script>
+
 </body>
 </html>
