@@ -3,64 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenEssence</title>
+    <title>GreenEssence - Boutique Écoresponsable</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        <h1>Bienvenue dans notre boutique éco-responsable</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="categories.html">Catégories</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Bijoux</a></li>
+                <li><a href="#">Accessoires</a></li>
+                <li><a href="#">Maison</a></li>
+                <li><a href="#">Nouveautés</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher des produits...">
+            <button>Recherche</button>
+        </div>
     </header>
 
-    <main>
-        <h2>Nos Produits Populaires</h2>
-        <div class="product-container">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/400x300" alt="Gourde en inox">
-                <h3>Gourde en inox - Réutilisable</h3>
-                <p class="price">19,99 €</p>
-                <p class="description">Une gourde en inox, durable et écologique.</p>
-                <a href="#" class="add-to-cart">Ajouter au panier</a>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/400x300" alt="Sac à vrac">
-                <h3>Sac à vrac en coton bio</h3>
-                <p class="price">5,99 €</p>
-                <p class="description">Sac réutilisable pour vos courses zéro déchet.</p>
-                <a href="#" class="add-to-cart">Ajouter au panier</a>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/400x300" alt="Savon naturel">
-                <h3>Savon solide naturel</h3>
-                <p class="price">4,99 €</p>
-                <p class="description">Savon fabriqué à la main, sans produits chimiques.</p>
-                <a href="#" class="add-to-cart">Ajouter au panier</a>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card">
-                <img src="https://via.placeholder.com/400x300" alt="Brosse à dents en bambou">
-                <h3>Brosse à dents en bambou</h3>
-                <p class="price">7,99 €</p>
-                <p class="description">Brosse à dents en bambou biodégradable pour une hygiène zéro déchet.</p>
-                <a href="#" class="add-to-cart">Ajouter au panier</a>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Bienvenue chez GreenEssence</h1>
+            <p>Des produits écoresponsables pour un mode de vie plus vert</p>
+            <a href="#" class="cta-btn">Découvrir nos produits</a>
         </div>
-    </main>
+    </section>
 
+    <!-- Product Display -->
+    <section class="product-display">
+        <h2>Nos produits</h2>
+        <div class="product-card">
+            <img src="gourde.jpg" alt="Gourde écologique">
+            <h3>Gourde en acier inoxydable</h3>
+            <p>Gardez votre boisson fraîche et écoresponsable.</p>
+            <span>€25,00</span>
+            <button>Acheter</button>
+        </div>
+        <div class="product-card">
+            <img src="bambou-brosse.jpg" alt="Brosse en bambou">
+            <h3>Brosse à dents en bambou</h3>
+            <p>Réduisez vos déchets avec cette brosse durable.</p>
+            <span>€6,00</span>
+            <button>Acheter</button>
+        </div>
+        <div class="product-card">
+            <img src="panier-ecologique.jpg" alt="Panier écoresponsable">
+            <h3>Panier en jute</h3>
+            <p>Fait à la main pour un style naturel et durable.</p>
+            <span>€18,00</span>
+            <button>Acheter</button>
+        </div>
+        <div class="product-card">
+            <img src="bracelet-marins.jpg" alt="Bracelet marin">
+            <h3>Bracelet Marin en Perles</h3>
+            <p>Un design élégant inspiré par l'océan.</p>
+            <span>€12,00</span>
+            <button>Acheter</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Ma Boutique Écologique. Tous droits réservés.</p>
+        <p>© 2024 GreenEssence - Boutique Écoresponsable</p>
     </footer>
+
 </body>
 </html>
