@@ -3,77 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GreenEssence est une boutique en ligne d'articles éco-responsables.">
-    <meta name="keywords" content="gourde, produits écologiques, éco-responsables">
-    <meta name="robots" content="index, follow">
+    <title>GreenEssence - Boutique Écologique</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>GreenEssence - Boutique éco-responsable</title>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#produits">Produits</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#panier"><i class="fas fa-cart-plus"></i> Panier</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1>GreenEssence - Boutique Écologique</h1>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#soins">Soins Personnels</a></li>
+                <li><a href="#maison">Maison Écologique</a></li>
+                <li><a href="#accessoires">Accessoires Écoresponsables</a></li>
+                <li><a href="#alimentation">Alimentation Durable</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Carrousel -->
-    <section class="carrousel">
-        <div class="carrousel-item">
-            <img src="gourde1.jpg" alt="Gourde en inox">
-            <h3>Gourde en inox</h3>
-            <p>22,99€</p>
-            <button class="ajouter-panier">Ajouter au panier</button>
-        </div>
-        <div class="carrousel-item">
-            <img src="brosse_bambou.jpg" alt="Brosse en bambou">
-            <h3>Brosse en bambou</h3>
-            <p>9,99€</p>
-            <button class="ajouter-panier">Ajouter au panier</button>
-        </div>
-        <button class="prev">←</button>
-        <button class="next">→</button>
-    </section>
+    <main>
+        <section id="soins">
+            <h2>Soins Personnels</h2>
+            <div class="product">
+                <img src="url_image_bio_savon" alt="Savon bio naturel">
+                <h3>Savon bio naturel</h3>
+                <p>Un savon fait à partir d'ingrédients naturels, parfait pour une peau saine et douce.</p>
+                <p class="price">€5.99</p>
+            </div>
+            <div class="product">
+                <img src="url_image_brosse_dent" alt="Brosse à dents en bambou">
+                <h3>Brosse à dents en bambou</h3>
+                <p>Une alternative zéro déchet à la brosse à dents en plastique, biodégradable et durable.</p>
+                <p class="price">€3.50</p>
+            </div>
+            <div class="product">
+                <img src="url_image_deodorant" alt="Déodorant naturel">
+                <h3>Déodorant naturel</h3>
+                <p>Déodorant sans aluminium et avec des ingrédients 100% naturels.</p>
+                <p class="price">€6.50</p>
+            </div>
+            <div class="product">
+                <img src="url_image_shampoing" alt="Shampoing solide bio">
+                <h3>Shampoing solide bio</h3>
+                <p>Shampoing doux et respectueux de votre cuir chevelu et de l'environnement.</p>
+                <p class="price">€7.99</p>
+            </div>
+            <div class="product">
+                <img src="url_image_huile_vegetale" alt="Huile végétale">
+                <h3>Huile végétale nourrissante</h3>
+                <p>Huile bio pour nourrir la peau et les cheveux.</p>
+                <p class="price">€8.00</p>
+            </div>
+            <div class="product">
+                <img src="url_image_crème" alt="Crème hydratante bio">
+                <h3>Crème hydratante bio</h3>
+                <p>Crème à base d'ingrédients naturels pour une peau douce et nourrie.</p>
+                <p class="price">€12.00</p>
+            </div>
+            <div class="product">
+                <img src="url_image_masque" alt="Masque capillaire bio">
+                <h3>Masque capillaire bio</h3>
+                <p>Masque nourrissant pour des cheveux brillants et revitalisés.</p>
+                <p class="price">€10.00</p>
+            </div>
+        </section>
 
-    <!-- Produits -->
-    <section id="produits" class="produits">
-        <h2>Nos Produits</h2>
-        <div class="produit-item">
-            <img src="gourde1.jpg" alt="Gourde écologique">
-            <h3>Gourde écologique</h3>
-            <p>Prix: 22,99€</p>
-            <button class="ajouter-panier">Ajouter au panier</button>
-        </div>
-        <div class="produit-item">
-            <img src="brosse_bambou.jpg" alt="Brosse en bambou">
-            <h3>Brosse en bambou</h3>
-            <p>Prix: 9,99€</p>
-            <button class="ajouter-panier">Ajouter au panier</button>
-        </div>
-    </section>
+        <section id="maison">
+            <h2>Maison Écologique</h2>
+            <div class="product">
+                <img src="url_image_sac_jute" alt="Sac en jute">
+                <h3>Sac en jute</h3>
+                <p>Un sac en jute robuste, parfait pour les courses ou le rangement.</p>
+                <p class="price">€9.99</p>
+            </div>
+            <div class="product">
+                <img src="url_image_bouteille_thermos" alt="Bouteille thermos inox">
+                <h3>Bouteille thermos inox</h3>
+                <p>Restez hydraté toute la journée avec cette bouteille thermos écologique et durable.</p>
+                <p class="price">€15.99</p>
+            </div>
+            <div class="product">
+                <img src="url_image_sac_reutilisable" alt="Sac réutilisable">
+                <h3>Sac réutilisable en toile</h3>
+                <p>Un sac en toile robuste, idéal pour faire ses courses sans plastique.</p>
+                <p class="price">€7.99</p>
+            </div>
+            <div class="product">
+                <img src="url_image_mug_bio" alt="Mug écologique">
+                <h3>Mug écologique en bambou</h3>
+                <p>Mug réutilisable, idéal pour remplacer les gobelets jetables.</p>
+                <p class="price">€5.99</p>
+            </div>
+            <div class="product">
+                <img src="url_image_brosse_bambou" alt="Brosse en bambou">
+                <h3>Brosse en bambou</h3>
+                <p>Brosse en bambou pour une approche écologique du nettoyage.</p>
+                <p class="price">€4.99</p>
+            </div>
+            <div class="product">
+                <img src="url_image_papier_recyclé" alt="Papier recyclé">
+                <h3>Papier recyclé</h3>
+                <p>Papier 100% recyclé, idéal pour vos documents écologiques.</p>
+                <p class="price">€2.99</p>
+            </div>
+            <div class="product">
+                <img src="url_image_lampe_solaires" alt="Lampe solaire extérieure">
+                <h3>Lampe solaire extérieure</h3>
+                <p>Éclairez votre jardin tout en respectant l'environnement avec des lampes solaires.</p>
+                <p class="price">€18.00</p>
+            </div>
+        </section>
 
-    <!-- Formulaire de Contact -->
-    <section id="contact">
-        <h2>Contactez-nous</h2>
-        <form>
-            <input type="text" name="name" placeholder="Votre nom">
-            <input type="email" name="email" placeholder="Votre email">
-            <textarea name="message" placeholder="Votre message"></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
-    </section>
+        <section id="accessoires">
+            <h2>Accessoires Écoresponsables</h2>
+            <div class="product">
+                <img src="url_image_sac_toile" alt="Sac en toile bio">
+                <h3>Sac en toile bio</h3>
+                <p>Un sac pratique, biodégradable et réutilisable pour vos déplacements.</p>
+                <p class="price">€8.99</p>
+            </div>
+            <div class="product">
+                <img src="url_image_portefeuille" alt="Portefeuille en cuir recyclé">
+                <h3>Portefeuille en cuir recyclé</h3>
+                <p>Portefeuille élégant fait à partir de cuir recyclé et durable.</p>
+                <p class="price">€19.99</p>
+            </div>
+            <div class="product">
+                <img src="url_image_bouteille_pliable" alt="Bouteille pliable">
+                <h3>Bouteille pliable</h3>
+                <p>Bouteille réutilisable et pliable, idéale pour les voyages.</p>
+                <p class="price">€12.99</p>
+            </div>
+            <div class="product">
+                <img src="url_image_porte_clé" alt="Porte-clé en bois">
+                <h3>Porte-clé en bois</h3>
+                <p>Un porte-clé écologique fabriqué à partir de bois recyclé.</p>
+                <p class="price">€4.50</p>
+            </div>
+            <div class="product">
+                <img src="url_image_brosse_solide" alt="Brosse solide">
+                <h3>Brosse solide en bois</h3>
+                <p>Idéale pour les tâches ménagères, cette brosse est durable et biodégradable.</p>
+                <p class="price">€6.00</p>
+            </div>
+            <div class="product">
+                <img src="url_image_torchon_bio" alt="Torchon en coton bio">
+                <h3>Torchon en coton bio</h3>
+                <p>Torchon fabriqué en coton biologique pour une cuisine plus éthique.</p>
+                <p class="price">€4.50</p>
+            </div>
+            <div class="product">
+                <img src="url_image_paniers_recyclés" alt="Panier recyclé">
+                <h3>Panier recyclé</h3>
+                <p>Un panier écoresponsable fabriqué à partir de matériaux recyclés.</p>
+                <p class="price">€10.00</p>
+            </div>
+        </section>
 
-    <!-- Panier -->
-    <section id="panier">
-        <h2>Votre Panier</h2>
-        <ul id="panier-list"></ul>
-        <p>Total : <span id="panier-total">0</span>€</p>
-    </section>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <section id="alimentation">
+            <h2>Alimentation Durable</h2>
+            <div class="product">
+                <img src="url_image_t
